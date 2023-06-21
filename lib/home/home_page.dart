@@ -76,19 +76,16 @@ class _HomePageState extends State<HomePage> {
             );
           } else {
             ConselhoModel item = store.state.value!;
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  item.slip.advice,
-                  style: const TextStyle(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w600,
-                      fontSize: 40,
-                      fontFamily: AutofillHints.birthday),
-                  textAlign: TextAlign.center,
-                ),
-              ],
+            return Center(
+              child: Text(
+                item.slip.advice,
+                style: const TextStyle(
+                    color: Colors.black54,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 40,
+                    fontFamily: AutofillHints.birthday),
+                textAlign: TextAlign.center,
+              ),
             );
           }
         },
